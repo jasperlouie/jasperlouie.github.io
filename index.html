@@ -81,7 +81,7 @@
                 <hr>
                 <p>UC Berkeley - 3rd Year - Computer Science and Cognitive Science</p>
                 <p>Software Engineering Intern at Google</p>
-                <p>Currently listening to: <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+                <p id="now-playing">Currently listening to: <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
 Kanye West - The Life of Pablo </p>
                 <!-- <p>Currently working on: Burritfy</p> -->
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">About Me</a>
@@ -325,6 +325,27 @@ Kanye West - The Life of Pablo </p>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    <script type="text/javascript">
+    var url = "http://ws.audioscrobbler.com/2.0/";
+    var lastfm = "http://www.last.fm/user/jlouie95/tracks";
+    $.get(
+        url,
+        {"method": "user.getrecenttracks",
+         "user": "jlouie95",
+         "api_key": "bc596f2b897c77f96c8746066b17fcb6",
+         "format": "json"},
+        function(data) {
+            var track = data.recenttracks.track[0]; 
+            var link = "<a href=\"" + lastfm + "\">";
+            var trackName = track.name;
+            var artistName = track.artist["#text"];
+            var icon = "<i class=\"fa fa-music\"></i>"
+
+            var innerHTML = "Currently listening to " + icon + " : " + link + artistName + " - " + trackName + "</a>" ;
+            $(" #now-playing ").html(innerHTML);
+        }
+    );
+    </script>
 
 </body>
 

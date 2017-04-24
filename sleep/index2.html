@@ -58,7 +58,7 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">How many hours do you sleep on an average night?</div>
+                <div class="intro-lead-in">What is your age?</div>
                   <input autofocus type="text" name="Hours" id='hoursTextArea'><br/><br/>
 
                 <a id="reflectedlink" href="#services" class="page-scroll btn btn-xl">Go!</a>
@@ -66,11 +66,20 @@
         </div>
     </header>
     <script type="text/javascript">
+     function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
         var link= document.getElementById('reflectedlink');
 
     var input= document.getElementById('hoursTextArea');
     input.onchange=input.onkeyup= function() {
-        link.href= './index2.html?q='+encodeURIComponent(input.value);
+        link.href= './results.html?age='+encodeURIComponent(input.value)+"&hours="+getParameterByName("q");
     };
 </script>
     <!-- jQuery -->

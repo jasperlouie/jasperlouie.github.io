@@ -778,3 +778,14 @@ input {
   stroke: #000;
   shape-rendering: crispEdges;
 }
+
+.annotation-note-bg{
+  fill: white
+}
+
+.annotation text {
+      fill: black;
+    }
+.handle {
+  fill:blue;
+}

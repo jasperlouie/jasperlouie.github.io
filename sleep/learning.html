@@ -49,6 +49,7 @@
                 <a class="navbar-brand page-scroll" href="#page-top">Got Sleep?</a>
             </div>
 
+            
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -58,21 +59,38 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">How many hours do you sleep on an average night?</div>
-                  <input autofocus type="text" name="Hours" id='hoursTextArea'><br/><br/>
-
-                <a id="reflectedlink" href="#services" class="page-scroll btn btn-xl">Go!</a>
+                <div id="header" class="intro-lead-in">At McGill University, a research team lead by Reut Gruber studied the effects of sleep on learning. She says that a deficiency of sleep was responsible for a 14% variance in math and 7% in English.</div>
+                <a href="#services" class="page-scroll btn btn-xl">Tell me more!</a>
             </div>
         </div>
     </header>
-    <script type="text/javascript">
-        var link= document.getElementById('reflectedlink');
 
-    var input= document.getElementById('hoursTextArea');
-    input.onchange=input.onkeyup= function() {
-        link.href= './index2.html?q='+encodeURIComponent(input.value);
-    };
-</script>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+                                  <img src="img/portfolio/learning.jpg" alt="">
+
+            <h2 class="section-heading">Because the kids who volunteered for the study were young (ages 7-11), they could not really be trusted to self report their sleep. Instead they were given "actigraph" wristbands which tracked their activity. From this, Gruber was able to draw the conclusion she had above by finding a correlation between the amount of sleep the kids got and their grades.</h2>
+
+        </div>
+    </section>
+
+
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">It can also help Memory:</h2>
+                    <h2 class="section-subheading text-muted">Sleep is incredibly important for memory consolidation. It helps because as you fall asleep, you tend to rehearse your information, and then in later stages, like stage 2 NREM sleep, you have slow wave sleep, which is also known to be an important stage for memorization. So if you have a big test, pulling an all nighter might not be as helpful as getting some sleep!</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 

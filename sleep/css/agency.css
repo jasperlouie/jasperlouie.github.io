@@ -744,3 +744,37 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+input {
+    font-weight: 200;
+    font-family: "Avenir Next",Avenir,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,sans-serif;
+    color: #febd17;
+    font-size: 4em;
+    outline: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: none;
+    background: 0 0;
+    display: block-inline;
+    height: 2em;
+    width: 300px;
+    padding: 0 2%;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    -moz-transition: color .2s ease-in-out,opacity .2s ease-in-out;
+    -o-transition: color .2s ease-in-out,opacity .2s ease-in-out;
+    -webkit-transition: color .2s ease-in-out,opacity .2s ease-in-out;
+    transition: color .2s ease-in-out,opacity .2s ease-in-out;
+}
+
+.axis {
+    font: 10px sans-serif;
+  }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}

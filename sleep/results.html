@@ -155,7 +155,7 @@ var y = d3.scaleLinear()
 var z = d3.scaleOrdinal()
     .range(["#e52d2d", "#a4ea9a"]);
 
-d3.csv("bar-data.csv", function(d, i, columns) {
+d3.csv("./bar-data.csv", function(d, i, columns) {
   for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
   d.total = t;
   return d;

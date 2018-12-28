@@ -25,8 +25,7 @@ hr.light {
 }
 
 a {
-    color: #ffffff;
-    text-decoration: underline;
+    color: #03A9F4;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -54,6 +53,11 @@ p {
 
 .bg-primary {
     background-color: #03A9F4;
+}
+
+.bg-primary:a {
+    text-decoration: underline;
+    color: #ffffff;
 }
 
 .bg-dark {

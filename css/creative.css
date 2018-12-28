@@ -55,7 +55,7 @@ p {
     background-color: #03A9F4;
 }
 
-.bg-primary:a {
+.bg-primary a {
     text-decoration: underline;
     color: #ffffff;
 }
